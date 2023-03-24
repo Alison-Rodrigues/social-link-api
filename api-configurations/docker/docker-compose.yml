@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  social-link-db:
+    image: postgres
+    hostname: social-link-db
+    container_name: social-link-db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'

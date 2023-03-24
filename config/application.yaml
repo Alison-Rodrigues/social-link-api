@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Social Link API
+  main:
+    banner-mode: OFF
+  datasource:
+    url: 'jdbc:postgresql://social-db/api_platform?currentSchema=platform_data'
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8080

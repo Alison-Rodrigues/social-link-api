@@ -4,10 +4,18 @@ spring:
   main:
     banner-mode: OFF
   datasource:
-    url: 'jdbc:postgresql://social-db/api_platform?currentSchema=platform_data'
+    url: jdbc:postgresql://social-db:5432/api_platform?currentSchema=platform_data
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
 
 server:
   port: 8080

@@ -6,7 +6,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserContactDto {
-    String name;
-    String email;
-    String message;
+    private String name;
+    private String email;
+    private String message;
+
+
 }

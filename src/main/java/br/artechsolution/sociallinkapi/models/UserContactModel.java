@@ -19,20 +19,20 @@ public class UserContactModel {
     @Id()
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Integer id;
+    private Integer id;
 
     @Column(name = "name", nullable = false, length = 150)
-    String name;
+    private String name;
 
     @Column(name = "email", nullable = false, length = 150)
-    String email;
+    private String email;
 
     @Column(name = "message", nullable = false, length = 300)
-    String message;
+    private String message;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "date_time")
-    LocalDateTime dateTime;
+    private LocalDateTime dateTime;
 
 
 }

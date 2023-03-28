@@ -18,12 +18,12 @@ public class UserAdminModel {
 
     @Id
     @Column(name = "uuid")
-    UUID uuid = UUID.randomUUID();
+    private UUID uuid = UUID.randomUUID();
 
     @Column(name = "email", unique = true, nullable = false, length = 150)
-    String email;
+    private String email;
 
     @Column(name = "password", nullable = false, length = 150)
-    String password;
+    private String password;
 
 }

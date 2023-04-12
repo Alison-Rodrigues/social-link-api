@@ -10,4 +10,5 @@ import java.util.UUID;
 @Repository
 public interface UserAdminRepository extends JpaRepository<UserAdminModel, UUID> {
 
+    UserAdminModel findByEmail(String email);
 }

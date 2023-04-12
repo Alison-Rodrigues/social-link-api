@@ -15,10 +15,17 @@ public class UserAdminService {
 
     public void save(UserAdminDto userAdminDto) {
 
+        UserAdminModel existsUser = userAdminRepository.findByEmail(userAdminDto.getEmail());
+
+        if (existsUser != null) {
+            throw new Error("E-mail já cadastrado.");
+        }
+
         UserAdminModel userAdminModel = new UserAdminModel();
 
         userAdminModel.setEmail(userAdminDto.getEmail());
         userAdminModel.setPassword(userAdminDto.getPassword());
+        userAdminModel.setRole(userAdminDto.getRole());
 
         userAdminRepository.save(userAdminModel);
     }

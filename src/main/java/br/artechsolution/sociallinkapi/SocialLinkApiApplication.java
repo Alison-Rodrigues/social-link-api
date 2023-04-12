@@ -14,10 +14,6 @@ public class SocialLinkApiApplication {
 		SpringApplication.run(SocialLinkApiApplication.class, args);
 	}
 
-	@Bean
-	public PasswordEncoder getPasswordEncoder() {
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		return encoder;
-	}
+
 
 }

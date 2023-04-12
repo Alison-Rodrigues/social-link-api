@@ -7,6 +7,7 @@ import br.artechsolution.sociallinkapi.services.UserContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 @RestController
@@ -20,6 +21,7 @@ public class UserContactController {
     private UserContactService userContactService;
 
     @GetMapping("/listMessages")
+    @RolesAllowed("ADMIN")
     public List<UserContactModel> findAll() {
         return userContactRepository.findAll();
     }
